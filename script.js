@@ -50,4 +50,12 @@ async function sendMessage() {
             </div>
         `;
     }
+    document.getElementById("user-input")
+    .addEventListener("keypress", function(event) {
+
+        if (event.key === "Enter") {
+            sendMessage();
+        }
+
+    });
 }
