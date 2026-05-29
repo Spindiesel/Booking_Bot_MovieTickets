@@ -5,7 +5,9 @@ async function sendMessage() {
 
     const message = input.value.trim();
 
-    if (!message) return;
+    if (!message) {
+        return;
+    }
 
     chatBox.innerHTML += `
         <div class="user-message">
