@@ -3,6 +3,8 @@ package com.rohit.bot_booking_backend.controller;
 import com.rohit.bot_booking_backend.model.ChatRequest;
 import com.rohit.bot_booking_backend.service.ChatService;
 import org.springframework.web.bind.annotation.*;
+import com.rohit.bot_booking_backend.model.Booking;
+import com.rohit.bot_booking_backend.repository.BookingRepository;
 
 import java.util.Map;
 @CrossOrigin(origins = "*")
