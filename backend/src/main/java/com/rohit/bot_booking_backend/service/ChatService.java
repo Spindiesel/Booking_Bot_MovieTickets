@@ -9,7 +9,8 @@ public class ChatService {
 
         message = message.toLowerCase();
 
-       if (message.equalsIgnoreCase("book tickets")) {
+       if (message.equalsIgnoreCase("book tickets")   || message.equalsIgnoreCase("i want to book tickets") || message.equalsIgnoreCase("i want to book movie tickets")) {
+            BookingSession session = new BookingSession();
 
     session.setStep("MOVIE");
 
