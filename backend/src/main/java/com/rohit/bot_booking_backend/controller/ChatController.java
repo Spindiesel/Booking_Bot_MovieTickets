@@ -5,7 +5,7 @@ import com.rohit.bot_booking_backend.service.ChatService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
-
+@CrossOrigin(origins = "*")
 @RestController
 @RequestMapping("/api")
 public class ChatController {
