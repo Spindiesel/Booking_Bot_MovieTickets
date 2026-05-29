@@ -28,4 +28,4 @@ public class ChatController {
 
         return Map.of("reply", reply);
     }
-}
+}   
