@@ -9,9 +9,12 @@ public class ChatService {
 
         message = message.toLowerCase();
 
-        if (message.contains("book")) {
-            return "Sure! Which movie would you like to book?";
-        }
+       if (message.equalsIgnoreCase("book tickets")) {
+
+    session.setStep("MOVIE");
+
+    return "Which movie would you like to watch?";
+}
 
         if (message.contains("cancel")) {
             return "Please provide your booking ID.";
