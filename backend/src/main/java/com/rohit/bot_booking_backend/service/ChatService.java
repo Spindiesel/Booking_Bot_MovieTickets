@@ -1,12 +1,19 @@
 package com.rohit.bot_booking_backend.service;
 
+import com.rohit.bot_booking_backend.model.Booking;
 import com.rohit.bot_booking_backend.model.BookingSession;
+import com.rohit.bot_booking_backend.repository.BookingRepository;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ChatService {
 
     private final BookingSession session = new BookingSession();
+    private final BookingRepository bookingRepository;
+
+    public ChatService(BookingRepository bookingRepository) {
+        this.bookingRepository = bookingRepository;
+    }
 
     public String getReply(String message) {
 
@@ -65,9 +72,19 @@ public class ChatService {
 
                 if (message.equalsIgnoreCase("yes")) {
 
+                    Booking booking = new Booking();
+
+                    booking.setMovie(session.getMovie());
+                    booking.setTickets(session.getTickets());
+                    booking.setDate(session.getDate());
+                    booking.setTime(session.getTime());
+
+                    Booking savedBooking = bookingRepository.save(booking);
+
                     session.setStep("NONE");
 
-                    return "Booking confirmed! 🎉";
+                    return "Booking confirmed! 🎉\nBooking ID: "
+                            + savedBooking.getId();
                 }
 
                 session.setStep("NONE");
