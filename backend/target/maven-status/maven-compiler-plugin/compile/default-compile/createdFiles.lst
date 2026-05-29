@@ -1,0 +1,4 @@
+com\rohit\bot_booking_backend\model\ChatRequest.class
+com\rohit\bot_booking_backend\controller\ChatController.class
+com\rohit\bot_booking_backend\service\ChatService.class
+com\rohit\bot_booking_backend\BotBookingBackendApplication.class
