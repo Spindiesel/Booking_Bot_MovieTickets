@@ -17,7 +17,7 @@ public class ChatService {
 
     public String getReply(String message) {
 
-        if (message.equalsIgnoreCase("book tickets")) {
+        if (message.equalsIgnoreCase("book tickets") || message.equalsIgnoreCase("book") || message.equalsIgnoreCase("booking")) {
 
             session.setStep("MOVIE");
             return "Which movie would you like to watch?";
@@ -95,11 +95,7 @@ public class ChatService {
 
                 return """
                         Hello!
-
-                        Type:
-                        Book Tickets
-
-                        to start a booking.
+                        How Can I assist you today?
                         """;
         }
     }
