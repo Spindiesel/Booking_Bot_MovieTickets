@@ -48,8 +48,6 @@ async function sendMessage() {
             document
                 .getElementById("new-booking-btn")
                 .style.display = "inline-block";
-
-            loadMovies();
         }
 
         chatBox.scrollTop = chatBox.scrollHeight;
@@ -135,6 +133,8 @@ function bookMovie(movieName) {
 }
 
 function startNewBooking() {
+
+    loadMovies();
 
     const chatBox =
         document.getElementById("chat-box");
