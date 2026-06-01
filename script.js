@@ -5,6 +5,17 @@ async function sendMessage() {
 
     const message = input.value.trim();
 
+    function newBooking() {
+
+    const chatBox = document.getElementById("chat-box");
+
+    chatBox.innerHTML = `
+        <div class="bot-message">
+            Hello! How can I help you today?
+        </div>
+    `;
+}
+
     if (!message) {
         return;
     }
