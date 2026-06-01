@@ -1,40 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Ticket Bot</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Movie Booking Assistant</title>
+
+    <link rel="stylesheet" href="Style.css">
 </head>
+
 <body>
 
-    <div class="container">
+    <header>
+        <h1>🎬 Movie Booking Assistant</h1>
+    </header>
 
-        <h1>🎬 Movie Ticket Bot</h1>
+    <!-- Movies Section -->
+    <div id="movie-container"></div>
 
-        <div id="chat-box" class="chat-box">
+    <!-- Chat Section -->
+    <div id="chat-box">
 
-            <div class="bot-message">
-                Hello! How can I help you today?
-            </div>
-
+        <div class="bot-message">
+            Welcome to Movie Booking Assistant! 🎥
+            <br><br>
+            Type "Book Tickets" to start booking.
         </div>
 
-        <div class="input-container">
-            <input
-                type="text"
-                id="user-input"
-                placeholder="Type your message..."
-            >
+    </div>
 
+    <!-- Input Area -->
+    <div class="input-area">
 
-            <button onclick="sendMessage()">Send</button>
-<button onclick="newBooking()">New Booking</button>
-        </div>
+        <input
+            type="text"
+            id="user-input"
+            placeholder="Type your message..."
+            autocomplete="off">
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+        <button
+            id="new-booking-btn"
+            onclick="startNewBooking()"
+            style="display:none;">
+            New Booking
+        </button>
 
     </div>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
